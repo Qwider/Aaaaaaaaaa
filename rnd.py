@@ -39,7 +39,7 @@ from .. import loader, utils
 @loader.tds
 class RandomizerMod(loader.Module):
     strings = {"name": "Рандомайзер"}
-    prefix = "<b>[Рандомайзер]</b>\n"
+    prefix = " "
 
     @loader.owner
     async def rndintcmd(self, m):
@@ -99,8 +99,8 @@ class RandomizerMod(loader.Module):
         users = await m.client.get_participants(m.chat)
         user = random.choice(users)
         await m.edit(
-            self.prefix
-            + "<b>❤️Пупсик:</b> <a"
-            f' href="tg://user?id={user.id}">{user.first_name}</a> |'
-            f" <code>{user.id}</code>"
+
+            + "<b>❤️Пупсик дня:</b> <a"
+            f' href="tg://user?id={user.id}">{user.first_name}</a>'
+
         )
