@@ -100,7 +100,7 @@ class RandomizerMod(loader.Module):
         user = random.choice(users)
         await m.edit(
 
-            + "<b>❤️Пупсик дня:</b> <a"
+            "<b>❤️Пупсик дня:</b> <a"
             f' href="tg://user?id={user.id}">{user.first_name}</a>'
 
         )
